@@ -93,7 +93,11 @@ It's a bit easier to think through the testing process in steps.
 1. The first describe statement, `describe('index.js', function()`, tells us
    that the file being tested is the `index.js` file.
 2. Our second describe statement,
-   `describe('distanceFromHqInBlocks()', function()`, lets us know what the name
+   describe('distanceFromHqInBlocks()', function() {
+      it('returns a distance in blocks', function() {
+        expect(distanceFromHqInBlocks(43)).to.equal(1);
+      });
+   lets us know what the name
    of our function is. In this case, our test is expecting to find a function
    called `distanceFromHqInBlocks()`.
 3. Our third statement, `it('returns a distance in blocks', function()`, describes
